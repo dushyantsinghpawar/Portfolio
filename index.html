@@ -40,7 +40,6 @@
         <div class="hero-content">
           <h2>Turning Data into Insights</h2>
           <p><em>Passionate about solving Problems</em> through <strong>Data-driven approaches</strong> and <strong>Machine Learning Solutions</strong>.</p>
-            <!-- <p>With a strong foundation in <strong>data science</strong>, <strong>machine learning</strong>, and <strong>software engineering</strong>, I am dedicated to creating impactful solutions that drive business success.</p> -->
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -54,9 +53,9 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>Hi! I’m a <strong>Computer Science graduate student</strong> at <strong>UNC Charlotte</strong>, graduating in <strong>May 2025</strong>, with a strong passion for working at the intersection of <strong>data</strong>, <strong>machine learning</strong>, and <em>real-world problem-solving</em>.</p>
+            <p>Hi! I'm a <strong>Computer Science graduate student</strong> at <strong>UNC Charlotte</strong>, graduating in <strong>May 2025</strong>, with a strong passion for working at the intersection of <strong>data</strong>, <strong>machine learning</strong>, and <em>real-world problem-solving</em>.</p>
             <p>I specialize in <em>uncovering insights from data</em>, <em>building predictive models</em>, and developing <strong>end-to-end solutions</strong> that support informed decision-making. My hands-on experience spans <strong>data science</strong>, <strong>statistical analysis</strong>, and <strong>deep learning</strong>—with projects involving <em>time series forecasting</em>, <em>algorithmic trading</em>, and <em>interactive dashboards</em>.</p>
-            <p>I thrive on translating complex datasets into <strong>clear, actionable outcomes</strong> and creating <strong>scalable ML systems</strong> that deliver real value. I’m currently <strong>seeking full-time opportunities</strong> as a <strong>Data Scientist</strong>, <strong>Data Analyst</strong>, or <strong>Machine Learning Engineer</strong>, where I can contribute, grow, and help solve meaningful problems.</p>
+            <p>I thrive on translating complex datasets into <strong>clear, actionable outcomes</strong> and creating <strong>scalable ML systems</strong> that deliver real value. I'm currently <strong>seeking full-time opportunities</strong> as a <strong>Data Scientist</strong>, <strong>Data Analyst</strong>, or <strong>Machine Learning Engineer</strong>, where I can contribute, grow, and help solve meaningful problems.</p>
             <p>Thanks for visiting—feel free to explore my projects or <a href="#contact"><strong>get in touch!</strong></a></p>
           </div>
           <div class="about-image">
@@ -105,7 +104,7 @@
         <div class="project-grid">
           <div class="project-card">
             <div class="project-image">
-              <img src="/images/KnowledgeVIS.gif" alt="KnowledgeVIS Project" />
+              <img src="images/KnowledgeVIS.gif" alt="KnowledgeVIS Project" />
             </div>
             <div class="project-content">
               <h3>KnowledgeVIS</h3>
@@ -117,13 +116,12 @@
               </div>
               <div class="project-links">
                 <a href="https://github.com/dushyantsinghpawar/KnowledgeVIS_Custom.git" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a>
-               
               </div>
             </div>
           </div>
           <div class="project-card">
             <div class="project-image">
-              <img src="/images/lstm.gif" alt="Stock Market LSTM Project" />
+              <img src="images/lstm.gif" alt="Stock Market LSTM Project" />
             </div>
             <div class="project-content">
               <h3>Stock Market LSTM</h3>
@@ -134,7 +132,6 @@
                 <span>Finance</span>
               </div>
               <div class="project-links">
-                <!-- <a href="#" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a> -->
                 <a href="https://huggingface.co/spaces/dushyantsinghpawar/lstm-stock-predictor" class="btn btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
               </div>
             </div>
@@ -158,7 +155,7 @@
           </div>
           <div class="project-card">
             <div class="project-image">
-              <img src="/images/food_cal.png" alt="Image to Calorie Estimator Project" />
+              <img src="images/food_cal.png" alt="Image to Calorie Estimator Project" />
             </div>
             <div class="project-content">
               <h3>Image to Calorie Estimator</h3>
@@ -282,24 +279,13 @@
               <a href="https://github.com/dushyantsinghpawar" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
-          <!-- <form class="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form> -->
-          <form action="https://formsubmit.co/dushyantsinghpawar@gmail.com" method="POST" class="contact-form">
+          
+          <form id="contactForm" action="https://formsubmit.co/dushyantsinghpawar@gmail.com" method="POST" class="contact-form">
+            <!-- FormSubmit configuration -->
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New portfolio contact message!">
             <input type="hidden" name="_next" value="https://dushyantsinghpawar.github.io/thank-you.html">
+            <input type="text" name="_honey" style="display:none"> <!-- Honeypot for spam prevention -->
           
             <div class="form-group">
               <label for="name">Name</label>
@@ -353,6 +339,20 @@
         });
       });
     });
+
+    // Form validation and feedback
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        // FormSubmit will handle the actual submission
+        // This is just for visual feedback before redirect
+        const submitBtn = this.querySelector('button[type="submit"]');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Form will continue submitting normally to FormSubmit
+      });
+    }
   </script>
 </body>
 </html>
