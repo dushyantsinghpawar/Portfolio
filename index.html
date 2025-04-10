@@ -285,7 +285,7 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="New portfolio contact message!">
             <input type="hidden" name="_next" value="https://dushyantsinghpawar.github.io/thankyou.html">
-            <input type="text" name="_honey" style="display:none"> <!-- Honeypot for spam prevention -->
+            <input type="text" name="_honey" style="display:none">
           
             <div class="form-group">
               <label for="name">Name</label>
@@ -344,15 +344,13 @@
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
-        // FormSubmit will handle the actual submission
-        // This is just for visual feedback before redirect
         const submitBtn = this.querySelector('button[type="submit"]');
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // Form will continue submitting normally to FormSubmit
       });
     }
   </script>
 </body>
 </html>
+<!--code end -->
