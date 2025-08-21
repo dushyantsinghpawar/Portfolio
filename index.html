@@ -1,356 +1,710 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dushyant Singh Pawar - Data Scientist specializing in machine learning, NLP, and data analytics. Portfolio showcasing projects and experience." />
-  <title>Dushyant Singh Pawar | Data Scientist Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dushyant Singh Pawar | Software Engineer • Backend • Cloud • Data</title>
+  <meta name="description" content="Software Engineer specializing in Backend, Cloud & Data systems. I build scalable APIs, serverless ETL pipelines, and ML-powered analytics on AWS with proven business impact." />
+  <meta name="keywords" content="Software Engineer, Backend Developer, AWS, Cloud Engineering, Data Engineering, Machine Learning, Python, FastAPI, Serverless, ETL" />
+  <link rel="canonical" href="https://dushyantsinghpawar.github.io/Portfolio/" />
+
+  <!-- Performance & assets -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="favicon-16x16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  <!-- Preconnect to CDN for better performance -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Dushyant Singh Pawar | Software Engineer • Backend • Cloud • Data" />
+  <meta property="og:description" content="Building scalable backend services, serverless ETL pipelines, and ML analytics on AWS. Proven track record of reducing costs by 25%, improving latency by 40%, and automating workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dushyantsinghpawar.github.io/Portfolio/" />
+  <meta property="og:image" content="images/og-cover-optimized.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Dushyant Singh Pawar",
+    "jobTitle":"Software Engineer",
+    "description":"Software Engineer specializing in Backend, Cloud & Data systems",
+    "url":"https://dushyantsinghpawar.github.io/Portfolio/",
+    "image":"https://dushyantsinghpawar.github.io/Portfolio/images/Dushyant.webp",
+    "email":"mailto:dushyantsinghpawar@gmail.com",
+    "address":{"@type":"PostalAddress","addressLocality":"Seattle","addressRegion":"WA","addressCountry":"US"},
+    "sameAs":["https://www.linkedin.com/in/dushyantsinghpawar/","https://github.com/dushyantsinghpawar"]
+  }
+  </script>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>Dushyant Singh Pawar</h1>
-      <p class="tagline">Data Scientist | Machine Learning | Data Analytics</p>
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-        <i class="fas fa-bars"></i>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen" aria-hidden="true">
+    <div class="loading-animation" role="status" aria-live="polite">
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="branding">
+        <h1 class="site-title">Dushyant Singh Pawar</h1>
+        <p class="tagline">Software Engineer • Backend • Cloud • Data</p>
+      </div>
+
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
       </button>
-      <nav id="primary-navigation">
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-text="About">About</a></li>
+          <li><a href="#timeline" data-text="Experience">Experience</a></li>
+          <li><a href="#projects" data-text="Projects">Projects</a></li>
+          <li><a href="#skills" data-text="Skills">Skills</a></li>
+          <li><a href="#resume" data-text="Resume">Resume</a></li>
+          <li><a href="#contact" data-text="Contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="hero" class="section">
-      <div class="container">
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="section hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
         <div class="hero-content">
-          <h2>Turning Data into Insights</h2>
-          <p><em>Passionate about solving Problems</em> through <strong>Data-driven approaches</strong> and <strong>Machine Learning Solutions</strong>.</p>
+          <h2 class="hero-title">
+            Build <span class="highlight-text" data-text="reliable">reliable</span> software and
+            <span class="highlight-text" data-text="scalable">scalable</span> data systems
+          </h2>
+          <p class="typing-text">I design <strong>backend services</strong>, <strong>serverless ETL pipelines</strong>, and <strong>ML-powered analytics</strong> on AWS. Results include 70% reduction in manual work, 40% faster APIs, and real-time dashboards that scale.</p>
+  
+
+
+          <div class="hero-stats" data-aos>
+            <div class="stat-item">
+              <div class="stat-number" data-target="70">0</div>
+              <div class="stat-label">% Less Manual Work</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="40">0</div>
+              <div class="stat-label">% Faster APIs</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="99.9">0</div>
+              <div class="stat-label">% Uptime</div>
+            </div>
+          </div>
+
           <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <a href="#projects" class="btn btn-primary">
+              <span>See Featured Work</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get In Touch</span>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-container" aria-hidden="true">
+            <div class="floating-elements">
+              <div class="floating-icon python"><i class="fab fa-python" aria-hidden="true"></i></div>
+              <div class="floating-icon aws"><i class="fab fa-aws" aria-hidden="true"></i></div>
+              <div class="floating-icon react"><i class="fab fa-react" aria-hidden="true"></i></div>
+              <div class="floating-icon docker"><i class="fab fa-docker" aria-hidden="true"></i></div>
+            </div>
+            <picture>
+              <!-- <source srcset="images/Dushyant.avif" type="image/avif" /> -->
+              <!-- <source srcset="images/Dushyant.webp" type="image/webp" /> -->
+              <img src="/images/Dushyant.JPG" alt="Portrait of Dushyant Singh Pawar" width="560" height="560" loading="eager" />
+            </picture>
           </div>
         </div>
       </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="section">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>Hi! I'm a <strong>Computer Science graduate student</strong> at <strong>UNC Charlotte</strong>, graduating in <strong>May 2025</strong>, with a strong passion for working at the intersection of <strong>data</strong>, <strong>machine learning</strong>, and <em>real-world problem-solving</em>.</p>
-            <p>I specialize in <em>uncovering insights from data</em>, <em>building predictive models</em>, and developing <strong>end-to-end solutions</strong> that support informed decision-making. My hands-on experience spans <strong>data science</strong>, <strong>statistical analysis</strong>, and <strong>deep learning</strong>—with projects involving <em>time series forecasting</em>, <em>algorithmic trading</em>, and <em>interactive dashboards</em>.</p>
-            <p>I thrive on translating complex datasets into <strong>clear, actionable outcomes</strong> and creating <strong>scalable ML systems</strong> that deliver real value. I'm currently <strong>seeking full-time opportunities</strong> as a <strong>Data Scientist</strong>, <strong>Data Analyst</strong>, or <strong>Machine Learning Engineer</strong>, where I can contribute, grow, and help solve meaningful problems.</p>
-            <p>Thanks for visiting—feel free to explore my projects or <a href="#contact"><strong>get in touch!</strong></a></p>
+            <!-- <p>I am a Software Engineer specializing in <strong>Backend, Cloud & Data systems</strong>. I build clean APIs, serverless ETL pipelines, and analytics that transform data into actionable insights. My focus is on reliability, performance, and measurable business impact.</p>
+            <p>Backend stack: <strong>Python, Java, TypeScript</strong>, <strong>FastAPI/Spring Boot</strong>, <strong>REST/gRPC</strong>, microservices, testing, and observability. Cloud & data: <strong>AWS</strong> (Lambda, S3, RDS, DynamoDB), ML with <strong>PyTorch/scikit-learn</strong>, and dashboards that stakeholders actually use.</p>
+            <p>M.S. in Computer Science (UNC Charlotte, GPA 3.90). Based in <strong>Seattle, WA</strong>. I enjoy work that blends practical engineering with meaningful outcomes.</p> -->
+            <p>
+              I am a Software Engineer specializing in <strong>Backend, Cloud & Data systems</strong>.  
+              I design APIs, build scalable data pipelines, and create analytics platforms that turn raw data into <strong>actionable insights</strong>.  
+              My focus is on systems that are <strong>reliable, performant, and impactful</strong>.
+            </p>
+
+            <p>
+              <strong>Technical Stack:</strong><br>
+              • Programming: Python, Java, TypeScript<br>
+              • Frameworks: FastAPI, Spring Boot, REST/gRPC<br>
+              • Systems: Microservices, testing, observability
+            </p>
+
+            <p>
+              <strong>Cloud & Data:</strong><br>
+              • AWS: Lambda, S3, RDS, DynamoDB<br>
+              • Machine Learning: PyTorch, scikit-learn<br>
+              • Data Visualization: Tableau, Power BI, interactive dashboards
+            </p>
+
+            <p>
+              Based in <strong>Seattle, WA</strong>, I enjoy work that blends <strong>practical engineering with data-driven problem solving</strong> -  
+              whether that’s scaling backend systems or uncovering insights in data.
+            </p>
+
           </div>
-          <div class="about-image">
-            <img src="images/Dushyant.JPG" alt="Dushyant Singh Pawar" />
-          </div>
+          <aside class="about-achievements">
+            <h3>Key Achievements</h3>
+            <ul class="achievement-list">
+              <li><i class="fa-solid fa-rocket"></i><div><strong>ETL Automation</strong><span>Reduced manual reporting by 70%</span></div></li>
+              <li><i class="fa-solid fa-tachometer-alt"></i><div><strong>API Optimization</strong><span>40% latency reduction for 120+ users</span></div></li>
+              <li><i class="fa-solid fa-server"></i><div><strong>System Reliability</strong><span>99.9% uptime with automated deployments</span></div></li>
+              <li><i class="fa-solid fa-brain"></i><div><strong>ML Accuracy</strong><span>RAG improved from 70% → 90%</span></div></li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
+    <!-- Experience & Education -->
     <section id="timeline" class="section">
       <div class="container">
-        <h2 class="section-title">Education & Experience Timeline</h2>
+        <h2 class="section-title">Experience & Education</h2>
         <div class="timeline">
-          <div class="timeline-item">
-            <div class="tooltip">Built strong foundations in data structures, algorithms, and software engineering with hands-on projects.</div>
-            <h3>Aug 2016 – Aug 2020</h3>
-            <p><strong>B.Tech in Computer Science</strong><br>Medi-Caps University, Indore, India</p>
-          </div>
-          <div class="timeline-item">
-            <div class="tooltip">Analyzed financial datasets, built forecasting models, and created Tableau dashboards for reporting.</div>
-            <h3>Feb 2020 – Aug 2020</h3>
-            <p><strong>Data Analysis Intern</strong><br>TCS, Indore</p>
-          </div>
-          <div class="timeline-item">
-            <div class="tooltip">Maintained global shipment tracking system, optimized SQL databases, and supported AWS migration.</div>
-            <h3>Nov 2020 – Feb 2022</h3>
-            <p><strong>System Engineer</strong><br>TCS, Pune</p>
-          </div>
-          <div class="timeline-item">
-            <div class="tooltip">Built automated grading and NLP feedback systems, dashboards with Power BI & Tableau.</div>
-            <h3>Mar 2022 – Apr 2023</h3>
-            <p><strong>Data Analyst</strong><br>EdvanceSkill, Bengaluru</p>
-          </div>
-          <div class="timeline-item">
-            <div class="tooltip">Currently working on advanced ML, AI, and big data projects in academic and real-world applications.</div>
-            <h3>Aug 2023 – May 2025</h3>
-            <p><strong>MS in Computer Science</strong><br>UNC Charlotte</p>
-          </div>
+          <article class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"><div class="timeline-icon"><i class="fas fa-code" aria-hidden="true"></i></div></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Software Engineer (Data & Analytics)</h3>
+                <span class="timeline-date">Jul 2025 – Present</span>
+              </div>
+              <p class="timeline-company">Rebecca Everlene Trust Company • Chicago, IL</p>
+              <ul class="timeline-achievements">
+                <li>Modular ETL in <strong>Python + AWS Lambda</strong> with logging, retries, and DLQs</li>
+                <li><strong>70% reduction</strong> in manual reporting time</li>
+                <li>Event-driven APIs and dashboards using S3, DynamoDB, and CloudWatch</li>
+                <li>Reporting lag cut <strong>from hours to seconds</strong></li>
+              </ul>
+              <div class="timeline-tech"><span>Python</span><span>Lambda</span><span>S3</span><span>DynamoDB</span><span>CloudWatch</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"><div class="timeline-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Graduate Research & Teaching Assistant</h3>
+                <span class="timeline-date">Jan 2024 – May 2025</span>
+              </div>
+              <p class="timeline-company">UNC Charlotte • Charlotte, NC</p>
+              <ul class="timeline-achievements">
+                <li>LangChain RAG with HyDE-based expansion; concurrency-safe caches</li>
+                <li>Accuracy improved <strong>from 70% to 90%</strong></li>
+                <li>Mentored <strong>90+ graduate students</strong> across ML and distributed systems</li>
+              </ul>
+              <div class="timeline-tech"><span>LangChain</span><span>RAG</span><span>AWS</span><span>Python</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"><div class="timeline-icon"><i class="fas fa-laptop-code" aria-hidden="true"></i></div></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Software Developer</h3>
+                <span class="timeline-date">Mar 2022 – Apr 2023</span>
+              </div>
+              <p class="timeline-company">EdvanceSkill for Actuaries • Bengaluru, India</p>
+              <ul class="timeline-achievements">
+                <li>REST APIs with <strong>FastAPI + PostgreSQL</strong>; indexing + Redis caching</li>
+                <li><strong>40% latency reduction</strong> for 120+ concurrent users</li>
+                <li>Serverless microservices with <strong>JWT/OAuth2 + RBAC</strong></li>
+                <li><strong>25% cost reduction</strong> and <strong>99.9% uptime</strong></li>
+              </ul>
+              <div class="timeline-tech"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span><span>Docker</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"><div class="timeline-icon"><i class="fas fa-university" aria-hidden="true"></i></div></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>M.S. in Computer Science</h3>
+                <span class="timeline-date">Aug 2023 – May 2025</span>
+              </div>
+              <p class="timeline-company">UNC Charlotte • GPA 3.90/4.00</p>
+            </div>
+          </article>
+          
+          <article class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"><div class="timeline-icon"><i class="fas fa-database" aria-hidden="true"></i></div></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Assistant System Engineer</h3>
+                <span class="timeline-date">Nov 2020 – Feb 2022</span>
+              </div>
+              <p class="timeline-company">Tata Consultancy Services • Pune, India</p>
+              <ul class="timeline-achievements">
+                <li>Oracle SQL pipelines across <strong>1M+ assets</strong> for predictive maintenance</li>
+                <li><strong>15% reduction</strong> in unplanned downtime</li>
+                <li>Validated S3 + Lambda migrations with safer rollbacks</li>
+              </ul>
+              <div class="timeline-tech"><span>Oracle SQL</span><span>REST APIs</span><span>AWS</span></div>
+            </div>
+          </article>
+
+          
+
+          <article class="timeline-item" data-aos="fade-up">
+            <div class="timeline-marker"><div class="timeline-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>B.Tech in Computer Science</h3>
+                <span class="timeline-date">Aug 2016 – Aug 2020</span>
+              </div>
+              <p class="timeline-company">Medi-Caps University • Indore, India</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
         <div class="project-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/KnowledgeVIS.gif" alt="KnowledgeVIS Project" />
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/serverless.png" alt="AWS Serverless Pipeline Architecture" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/" target="_blank" rel="noopener" class="project-link">
+                    <i class="fab fa-github" aria-hidden="true"></i><span>View Code</span>
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="project-content">
-              <h3>KnowledgeVIS</h3>
-              <p>Streamlit app for LLM-based fill-in-the-blank exploration with BERT/PubMedBERT and interactive visualizations.</p>
-              <div class="project-tags">
-                <span>NLP</span>
-                <span>Streamlit</span>
-                <span>BERT</span>
+              <h3>AWS Serverless Pipeline</h3>
+              <p>Event-driven file ingestion with Lambda, S3, DynamoDB, retries & DLQs. Processes files in under 3 seconds at sub-$1/month.</p>
+              <div class="project-metrics">
+                <span class="metric"><i class="fas fa-clock" aria-hidden="true"></i> &lt;3s</span>
+                <span class="metric"><i class="fas fa-dollar-sign" aria-hidden="true"></i> &lt;$1/mo</span>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/dushyantsinghpawar/KnowledgeVIS_Custom.git" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a>
+              <ul class="project-tags"><li>Lambda</li><li>S3</li><li>DynamoDB</li><li>Event-Driven</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/engage.png" alt="EngageTrack Analytics Dashboard" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/" target="_blank" rel="noopener" class="project-link">
+                    <i class="fab fa-github" aria-hidden="true"></i><span>View Code</span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/lstm.gif" alt="Stock Market LSTM Project" />
+            <div class="project-content">
+              <h3>EngageTrack Analytics</h3>
+              <p>Real-time analytics with Flask/React/PostgreSQL. ~92% accuracy on labeled events; &lt;200ms queries for 100+ users.</p>
+              <div class="project-metrics">
+                <span class="metric"><i class="fas fa-percentage" aria-hidden="true"></i> 92%</span>
+                <span class="metric"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> &lt;200ms</span>
+              </div>
+              <ul class="project-tags"><li>Flask</li><li>React</li><li>PostgreSQL</li><li>Real-time</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/chartmind.png" alt="ChartMind AI Chart Analysis" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/" target="_blank" rel="noopener" class="project-link">
+                    <i class="fab fa-github" aria-hidden="true"></i><span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>ChartMind AI</h3>
+              <p>Chart interpreter (Python/OpenCV) that extracts data series & captions to JSON. 85% accuracy on 500+ samples; 60% analysis time saved.</p>
+              <div class="project-metrics">
+                <span class="metric"><i class="fas fa-percentage" aria-hidden="true"></i> 85%</span>
+                <span class="metric"><i class="fas fa-clock" aria-hidden="true"></i> 60% faster</span>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>OpenCV</li><li>Docker</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/food_cal.png" alt="Image to Calorie Estimator" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/dushyantsinghpawar/Gemini_API_Image_to_Calorie_Calculator" target="_blank" rel="noopener" class="project-link">
+                    <i class="fab fa-github" aria-hidden="true"></i><span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Image → Calorie Estimator</h3>
+              <p>FastAPI service combining a vision model with LLM explanations for food calorie estimation. Dockerized, AWS-ready.</p>
+              <ul class="project-tags"><li>FastAPI</li><li>Computer Vision</li><li>LLM</li><li>Docker</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/lstm.gif" alt="LSTM Stock Prediction Demo" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://huggingface.co/spaces/dushyantsinghpawar/lstm-stock-predictor" target="_blank" rel="noopener" class="project-link">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i><span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="project-content">
               <h3>Stock Market LSTM</h3>
-              <p>Time-series forecasting and strategy backtesting using LSTM neural networks, deployed in Streamlit.</p>
-              <div class="project-tags">
-                <span>Deep Learning</span>
-                <span>Time Series</span>
-                <span>Finance</span>
-              </div>
-              <div class="project-links">
-                <a href="https://huggingface.co/spaces/dushyantsinghpawar/lstm-stock-predictor" class="btn btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              </div>
+              <p>Time-series forecasting with a backtest harness and Streamlit demo. Leakage checks and walk-forward evaluation included.</p>
+              <ul class="project-tags"><li>PyTorch</li><li>LSTM</li><li>Streamlit</li><li>Finance</li></ul>
             </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/Spectre.gif" alt="SPECTRE Project" />
+          </article>
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/Spectre.gif" alt="SPECTRE 3D Facial Expression Recognition" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/dushyantsinghpawar/SPECTRE" target="_blank" rel="noopener" class="project-link">
+                    <i class="fab fa-github" aria-hidden="true"></i><span>View Code</span>
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="project-content">
               <h3>SPECTRE</h3>
-              <p>3D Facial Expression Recognition using Deep Learning, Transformers, and computer vision on video data.</p>
-              <div class="project-tags">
-                <span>Computer Vision</span>
-                <span>Transformers</span>
-                <span>Deep Learning</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/dushyantsinghpawar/SPECTRE.git" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a>
-              </div>
+              <p>3D facial expression recognition using transformers and efficient CV pipelines for real-time video sequences.</p>
+              <ul class="project-tags"><li>Transformers</li><li>Computer Vision</li><li>3D</li><li>Deep Learning</li></ul>
             </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="images/food_cal.png" alt="Image to Calorie Estimator Project" />
-            </div>
-            <div class="project-content">
-              <h3>Image to Calorie Estimator</h3>
-              <p>Multimodal app using image recognition + LLM (FastAPI, Docker) to estimate food calories visually.</p>
-              <div class="project-tags">
-                <span>Computer Vision</span>
-                <span>FastAPI</span>
-                <span>Docker</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/dushyantsinghpawar/Gemini_API_Image_to_Calorie_Calculator.git" class="btn btn-sm"><i class="fab fa-github"></i> GitHub</a>
-              </div>
-            </div>
-          </div>
+          </article>
+
         </div>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title">Technical Skills</h2>
+
         <div class="skills-container">
-          <div class="skill-category">
-            <h3>Programming</h3>
-            <div class="skill-list">
-              <div class="skill-item">
-                <span>Python</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 95%;"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span>SQL</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span>R</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 75%;"></div>
-                </div>
-              </div>
+          <div class="skill-category" data-aos="fade-up">
+            <div class="category-header"><i class="fas fa-code" aria-hidden="true"></i><h3>Languages</h3></div>
+            <div class="skills-grid">
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Python</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Java</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">TypeScript/JavaScript</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">SQL</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">C++</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div></div>
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Data Science</h3>
-            <div class="skill-list">
-              <div class="skill-item">
-                <span>Machine Learning</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span>NLP</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 85%;"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span>Computer Vision</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 80%;"></div>
-                </div>
-              </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-header"><i class="fas fa-server" aria-hidden="true"></i><h3>Backend & Architecture</h3></div>
+            <div class="skills-grid">
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">FastAPI</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Spring Boot</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">REST/gRPC</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Microservices</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <div class="skill-list">
-              <div class="skill-item">
-                <span>Tableau</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span>AWS</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 75%;"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <span>Docker</span>
-                <div class="skill-bar">
-                  <div class="skill-level" style="width: 70%;"></div>
-                </div>
-              </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-header"><i class="fab fa-aws" aria-hidden="true"></i><h3>Cloud & Infrastructure</h3></div>
+            <div class="skills-grid">
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">AWS (Lambda, API GW, S3, RDS, DynamoDB, CloudWatch)</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Docker</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Kubernetes</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Terraform</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div></div>
+            </div>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <div class="category-header"><i class="fas fa-database" aria-hidden="true"></i><h3>Data & ML</h3></div>
+            <div class="skills-grid">
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">PostgreSQL</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">PyTorch</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">ETL Pipelines</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div></div>
+              <div class="skill-item"><div class="skill-info"><span class="skill-name">Kafka</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Resume -->
     <section id="resume" class="section">
       <div class="container">
         <h2 class="section-title">Resume</h2>
         <div class="resume-content">
-          <p>For a comprehensive overview of my skills, experience, and education, please download my resume.</p>
-          <a href="Resume_DSP.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+          <p class="resume-intro">Software Engineer with strengths in <strong>backend, cloud, and data</strong>. Shipped serverless ETL, real-time dashboards, and ML prototypes on AWS. Highlights:</p>
+          <div class="highlight-grid">
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div><div class="highlight-content"><h4>Performance Optimization</h4><p>40% latency reduction, 25% infra cost savings</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-robot" aria-hidden="true"></i></div><div class="highlight-content"><h4>Automation Excellence</h4><p>70% reduction in manual work via ETL</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div><div class="highlight-content"><h4>Reliability</h4><p>99.9% uptime with monitoring & tests</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-brain" aria-hidden="true"></i></div><div class="highlight-content"><h4>ML & AI</h4><p>RAG accuracy lifted from 70% → 90%</p></div></div>
+          </div>
+
+          <div class="resume-actions">
+            <a href="Resume_Dushyant.pdf" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i><span>Download Resume</span></a>
+            <a href="https://www.linkedin.com/in/dushyantsinghpawar/" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>View LinkedIn</span></a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="section-title">Get In Touch</h2>
         <div class="contact-content">
           <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:dpawar4@charlotte.edu">dpawar4@charlotte.edu</a>
+            <div class="contact-intro"><p>Ready to discuss your next project or explore opportunities? I’m interested in problems that blend engineering excellence with business impact.</p></div>
+            <div class="contact-methods">
+              <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div><div class="contact-details"><h4>Email</h4><a href="mailto:dushyantsinghpawar@gmail.com">dushyantsinghpawar@gmail.com</a></div></div>
+              <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div><div class="contact-details"><h4>Phone</h4><a href="tel:+19195791341">+1 (919) 579-1341</a></div></div>
+              <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div><div class="contact-details"><h4>Location</h4><span>Seattle, WA</span></div></div>
             </div>
-            <div class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/dushyantsinghpawar/" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/dushyantsinghpawar" target="_blank" rel="noopener">GitHub</a>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/dushyantsinghpawar/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://github.com/dushyantsinghpawar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
           </div>
-          
-          <form id="contactForm" action="https://formsubmit.co/dushyantsinghpawar@gmail.com" method="POST" class="contact-form">
-            <!-- FormSubmit configuration -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New portfolio contact message!">
-            <input type="hidden" name="_next" value="https://dushyantsinghpawar.github.io/Portfolio/thankyou.html">
-            <input type="text" name="_honey" style="display:none">
-          
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+
+          <!-- Works now with FormSubmit; replace with your backend when ready -->
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/dushyantsinghpawar@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New portfolio contact message!" />
+            <input type="hidden" name="_next" value="https://dushyantsinghpawar.github.io/Portfolio/thankyou.html" />
+            <input type="text" name="_honey" style="display:none" />
+
+            <div class="form-row">
+              <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" required /><span class="form-error"></span></div>
+              <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required /><span class="form-error"></span></div>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>          
+            <div class="form-group"><label for="subject">Subject</label><input id="subject" name="subject" type="text" required /><span class="form-error"></span></div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="6" required></textarea><span class="form-error"></span></div>
+
+            <button type="submit" class="btn btn-primary">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading">Sending...</span>
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2025 Dushyant Singh Pawar. All rights reserved.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/dushyantsinghpawar/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/dushyantsinghpawar" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-          <a href="mailto:dpawar4@charlotte.edu"><i class="fas fa-envelope"></i></a>
+        <div class="footer-info">
+          <h3>Dushyant Singh Pawar</h3>
+          <p>Building the future, one line of code at a time.</p>
         </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#timeline">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:dushyantsinghpawar@gmail.com">Email</a></li>
+              <li><a href="https://www.linkedin.com/in/dushyantsinghpawar/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/dushyantsinghpawar" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Dushyant Singh Pawar. All rights reserved.</p>
+        <p>Made with ❤️ and lots of ☕</p>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll to top -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Scripts -->
   <script>
-    // Mobile navigation toggle
+    // Loading screen
+    window.addEventListener('load', () => {
+      const ls = document.getElementById('loadingScreen');
+      if (ls) setTimeout(() => ls.classList.add('hidden'), 300);
+    });
+
+    // Mobile navigation with focus trap
     const navToggle = document.querySelector('.mobile-nav-toggle');
-    const primaryNav = document.querySelector('#primary-navigation');
-    
-    navToggle.addEventListener('click', () => {
-      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !isExpanded);
-      primaryNav.classList.toggle('nav-open');
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Form validation and feedback
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        const submitBtn = this.querySelector('button[type="submit"]');
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-      });
+    const primaryNav = document.getElementById('primary-navigation');
+    function toggleNav(forceOpen = null) {
+      const open = forceOpen !== null ? forceOpen : !(navToggle.getAttribute('aria-expanded') === 'true');
+      navToggle.setAttribute('aria-expanded', String(open));
+      primaryNav.classList.toggle('nav-open', open);
+      document.body.style.overflow = open ? 'hidden' : 'auto';
+      if (open) primaryNav.querySelector('a')?.focus();
     }
+    navToggle?.addEventListener('click', () => toggleNav());
+    primaryNav?.addEventListener('click', (e) => { if (e.target.tagName === 'A') toggleNav(false); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && primaryNav?.classList.contains('nav-open')) toggleNav(false);
+    });
+
+    // Smooth anchor scroll (respects reduced motion)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href'); const target=document.querySelector(id);
+        if(!target) return;
+        if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+          e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+
+    // Intersection Observer (animations + counters + skills)
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('animate');
+
+        // Animate counters in hero
+        if(entry.target.classList.contains('hero-stats')){
+          entry.target.querySelectorAll('.stat-number').forEach(counter=>{
+            const target=Number(counter.dataset.target);
+            const duration=1000;
+            const start=performance.now();
+            function step(t){
+              const p=Math.min(1,(t-start)/duration);
+              const val = target===99.9 ? (99.9*p).toFixed(1) : Math.round(target*p);
+              counter.textContent = val;
+              if(p<1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+          });
+        }
+
+        // Fill skill bars
+        entry.target.querySelectorAll?.('.skill-progress').forEach((bar,idx)=>{
+          const w=bar.getAttribute('data-width'); setTimeout(()=>bar.style.width=w, idx*120);
+        });
+
+        io.unobserve(entry.target);
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-aos], .timeline-item, .project-card, .skill-category, .highlight-item, .contact-item, .contact-form, .hero-stats').forEach(el=>io.observe(el));
+
+    // Scroll to top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY>300) scrollToTopBtn.classList.add('visible');
+      else scrollToTopBtn.classList.remove('visible');
+    });
+    scrollToTopBtn.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Header behavior
+    const header = document.getElementById('siteHeader');
+    let lastY=window.scrollY;
+    window.addEventListener('scroll',()=>{
+      const y=window.scrollY;
+      header.style.transform = (y>lastY && y>200) ? 'translateY(-100%)':'translateY(0)';
+      lastY=y;
+    });
+
+    // Parallax hero background (fixed variable names)
+    const heroBg = document.querySelector('.hero-bg');
+    window.addEventListener('scroll', ()=>{
+      const s = window.pageYOffset;
+      if (heroBg && s < window.innerHeight) heroBg.style.transform = `translateY(${s*0.3}px)`;
+    });
+
+    // Typing effect (once)
+    const typingEl = document.querySelector('.typing-text');
+    if (typingEl) {
+      const original = typingEl.textContent;
+      typingEl.textContent='';
+      let i=0;
+      const type=()=>{ if(i<=original.length){ typingEl.textContent=original.slice(0,i++); setTimeout(type,18);} };
+      const once = new IntersectionObserver((entries)=>{
+        if(entries[0].isIntersecting){ type(); once.disconnect(); }
+      });
+      once.observe(typingEl);
+    }
+
+    // Form validation & submit (works with FormSubmit)
+    const contactForm = document.getElementById('contactForm');
+    contactForm?.addEventListener('submit', (e)=>{
+      const fields = contactForm.querySelectorAll('input[required], textarea[required]');
+      let ok = true;
+      fields.forEach(f=>{
+        const err=f.parentElement.querySelector('.form-error');
+        let msg='';
+        if(!f.value.trim()) msg='This field is required';
+        else if(f.type==='email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) msg='Enter a valid email';
+        err.textContent=msg; err.classList.toggle('show', !!msg);
+        if(msg) ok=false;
+      });
+      if(!ok){ e.preventDefault(); return; }
+      contactForm.classList.add('loading');
+    });
+
+    // Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-<!--code end -->
