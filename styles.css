@@ -226,6 +226,7 @@ animation:float 20s ease-in-out infinite}
   .about-photo{max-width:360px;margin:0 auto}
 }
 @media (max-width: 768px){
+  #hero{align-items:flex-start;padding-top:140px}
   .mobile-nav-toggle{display:block}
   .primary-nav{position:absolute;top:100%;left:0;right:0;background:rgba(250,243,233,.97);backdrop-filter:blur(20px);border-top:1px solid var(--border);transform:translateY(-100%);opacity:0;visibility:hidden;transition:all .3s}
   .primary-nav.nav-open{transform:translateY(0);opacity:1;visibility:visible}
