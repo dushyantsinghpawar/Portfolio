@@ -294,46 +294,100 @@
 
         <article class="project-spotlight" data-aos="fade-up">
           <div class="spotlight-media">
-            <img src="images/orderup.webp" alt="MedKids OrderUp AI: allergen-safe recipe and nutrition app for kids" loading="lazy" />
+            <div class="spotlight-photos">
+              <span class="photo-caption">Landing Page</span>
+              <img src="images/orderup.webp" alt="MedKids OrderUp AI: home page with a recipe-based shopping cart preview" loading="lazy" />
+              <span class="photo-caption carousel-caption">Shop &amp; Recipe Cart</span>
+              <div class="carousel">
+                <div class="carousel-track">
+                  <img src="images/orderup-shop.webp" alt="MedKids OrderUp AI: shop page for building a kid-friendly cart from recipes" loading="lazy" data-caption="Shop &amp; Recipe Cart" />
+                  <img src="images/orderup-video.webp" alt="MedKids OrderUp AI: cooking lesson videos for kids" loading="lazy" data-caption="Cooking Lesson Videos" />
+                </div>
+                <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous screenshot"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" class="carousel-arrow carousel-next" aria-label="Next screenshot"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+                <div class="carousel-dots">
+                  <button type="button" class="carousel-dot active" aria-label="Go to screenshot 1"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to screenshot 2"></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="spotlight-content">
             <span class="spotlight-eyebrow">Featured Project</span>
             <h3>MedKids OrderUp AI</h3>
-            <p>MedKids OrderUp AI helps parents find recipes that are actually safe for their kids to eat. Parents set up an allergen profile for each child, and the app filters out anything that touches those allergens before a single recipe shows up, then ranks what's left by that kid's nutrition goals. I led the team that built it and did most of the hands-on engineering myself, across the frontend, both backend services, and the infrastructure running all three.</p>
-
-            <div class="arch-strip" aria-label="System architecture">
-              <span class="arch-box"><i class="fab fa-react" aria-hidden="true"></i>React / TypeScript client</span>
-              <i class="fas fa-arrow-right arch-arrow" aria-hidden="true"></i>
-              <span class="arch-box"><i class="fab fa-node-js" aria-hidden="true"></i>Node / Express API</span>
-              <i class="fas fa-arrow-right arch-arrow" aria-hidden="true"></i>
-              <span class="arch-box"><i class="fas fa-brain" aria-hidden="true"></i>FastAPI recommendation service</span>
-              <i class="fas fa-arrow-right arch-arrow" aria-hidden="true"></i>
-              <span class="arch-box"><i class="fas fa-database" aria-hidden="true"></i>MongoDB Atlas</span>
-            </div>
-            <p class="arch-note">The recommendation service sits behind its own API-key boundary, isolated from the main API.</p>
-
-            <div class="spotlight-breakdown">
-              <div class="spotlight-block">
-                <h4>My Role</h4>
-                <p>Primary engineer and de facto DevOps lead on a 5-person team: the backend split, a frontend rebuild from a Figma handoff, the AI service, auth, and the deploy pipeline.</p>
-              </div>
-              <div class="spotlight-block">
-                <h4>Key Decisions</h4>
-                <p>The allergen engine hard-excludes any recipe with a matching allergen instead of scoring it lower, so nothing borderline slips through. The recommendation logic lives in its own Python service, since the NLP tooling it needs doesn't have a good Node equivalent.</p>
-              </div>
-              <div class="spotlight-block">
-                <h4>Challenges</h4>
-                <p>Allergen names show up inconsistently across recipe sources: peanut, peanuts, groundnut. I built a synonym-normalization layer shared between the TypeScript and Python sides, with a CI check that fails the build if the two drift apart. I also traced a flaky test suite to every test spinning up its own in-memory database, and fixed it with one shared instance and per-file isolation.</p>
-              </div>
-              <div class="spotlight-block">
-                <h4>Results</h4>
-                <p>Backend coverage landed around 92% of lines and 84% of branches, with the AI service at 100%. Deployed as three separate services across Render and Vercel, with GitHub Actions gating every deploy on the full suite passing.</p>
-              </div>
+            <p class="spotlight-summary">Production-ready AI-powered meal recommendation platform built with React, Express, FastAPI, MongoDB Atlas, Docker, and GitHub Actions CI/CD.</p>
+            <div class="spotlight-links">
+              <span class="spotlight-status" title="Currently available to internal testers. Public release coming soon."><i class="fas fa-lock" aria-hidden="true"></i> Private Beta</span>
+              <a href="#medkids-architecture" class="spotlight-link"><i class="fas fa-sitemap" aria-hidden="true"></i> System Design</a>
             </div>
 
-            <div class="project-metrics">
-              <span class="metric"><i class="fas fa-shield-alt" aria-hidden="true"></i> Zero allergen leakage</span>
-              <span class="metric"><i class="fas fa-vial" aria-hidden="true"></i> 92%/84% test coverage</span>
+            <div class="spotlight-intro">
+              <p>MedKids OrderUp AI helps parents find recipes that are safe for their children.</p>
+              <p>Every child has an individual allergy profile, and recipes are filtered before recommendations are generated.</p>
+              <p>I served as the technical lead on a 5-person team, building the React frontend, Express backend, FastAPI recommendation service, authentication, and deployment infrastructure.</p>
+            </div>
+
+            <div class="spotlight-badges">
+              <span class="spotlight-badge">Multi-Service Architecture</span>
+              <span class="spotlight-badge">JWT Authentication</span>
+              <span class="spotlight-badge">AI Recommendation Engine</span>
+              <span class="spotlight-badge">Docker</span>
+              <span class="spotlight-badge">GitHub Actions CI/CD</span>
+              <span class="spotlight-badge">MongoDB Atlas</span>
+              <span class="spotlight-badge">92% Test Coverage</span>
+            </div>
+
+            <div class="arch-diagram" id="medkids-architecture" aria-label="System architecture">
+              <div class="arch-node arch-client"><i class="fab fa-react" aria-hidden="true"></i><span>React / TypeScript Client</span></div>
+              <i class="fas fa-arrow-down arch-connector arch-arrow-top" aria-hidden="true"></i>
+              <div class="arch-node arch-api"><i class="fab fa-node-js" aria-hidden="true"></i><span>Node / Express API</span></div>
+              <div class="arch-branch" aria-hidden="true">
+                <span class="arch-stem"></span>
+                <span class="arch-h"></span>
+                <span class="arch-tick arch-tick-l"></span>
+                <span class="arch-tick arch-tick-r"></span>
+              </div>
+              <i class="fas fa-arrow-down arch-connector arch-arrow-mobile" aria-hidden="true"></i>
+              <div class="arch-node arch-db"><i class="fas fa-database" aria-hidden="true"></i><span>MongoDB Atlas</span></div>
+              <div class="arch-node arch-ai"><i class="fas fa-brain" aria-hidden="true"></i><span>FastAPI Recommendation Service</span><small>API-key boundary</small></div>
+            </div>
+          </div>
+
+          <div class="spotlight-breakdown">
+            <div class="spotlight-block spotlight-block-primary">
+              <h4>Ownership</h4>
+              <ul>
+                <li>Led backend architecture</li>
+                <li>Built AI recommendation service</li>
+                <li>Owned deployment pipeline</li>
+                <li>Implemented authentication and RBAC</li>
+              </ul>
+            </div>
+            <div class="spotlight-block">
+              <h4>Engineering Decisions</h4>
+              <ul>
+                <li>Hard allergen exclusion before ranking</li>
+                <li>Dedicated FastAPI service for recommendation engine</li>
+                <li>Shared normalization layer across services</li>
+              </ul>
+            </div>
+            <div class="spotlight-block">
+              <h4>Engineering Challenges</h4>
+              <ul>
+                <li>Unified allergen synonym normalization</li>
+                <li>Solved inconsistent test isolation</li>
+                <li>Kept TypeScript and Python logic synchronized</li>
+              </ul>
+            </div>
+            <div class="spotlight-block">
+              <h4>Impact</h4>
+              <div class="impact-grid">
+                <div class="impact-stat"><span class="impact-number">92%</span><span class="impact-label">Line Coverage</span></div>
+                <div class="impact-stat"><span class="impact-number">84%</span><span class="impact-label">Branch Coverage</span></div>
+                <div class="impact-stat"><span class="impact-number">100%</span><span class="impact-label">AI Service Coverage</span></div>
+                <div class="impact-stat"><span class="impact-number">0</span><span class="impact-label">Allergen Leakage</span></div>
+              </div>
+              <p class="impact-note">Deployed as three services across Render and Vercel.</p>
             </div>
           </div>
         </article>
@@ -610,6 +664,29 @@
       document.body.style.overflow = open ? 'hidden' : 'auto';
       if (open) primaryNav.querySelector('a')?.focus();
     }
+    // Project spotlight carousel
+    document.querySelectorAll('.carousel').forEach((carousel) => {
+      const track = carousel.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const dots = Array.from(carousel.querySelectorAll('.carousel-dot'));
+      const caption = carousel.parentElement.querySelector('.carousel-caption');
+      let index = 0;
+      const update = () => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        if (caption && slides[index].dataset.caption) caption.textContent = slides[index].dataset.caption;
+      };
+      carousel.querySelector('.carousel-prev')?.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+      });
+      carousel.querySelector('.carousel-next')?.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        update();
+      });
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { index = i; update(); }));
+    });
+
     navToggle?.addEventListener('click', () => toggleNav());
     primaryNav?.addEventListener('click', (e) => { if (e.target.tagName === 'A') toggleNav(false); });
     document.addEventListener('keydown', (e) => {
