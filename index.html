@@ -80,7 +80,7 @@
           <li><a href="#timeline">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#resume">Resume</a></li>
+          <li><a href="#resume">Highlights</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -94,10 +94,9 @@
       <div class="container hero-inner">
         <div class="hero-content">
           <h2 class="hero-title">
-            Ship <span class="highlight-text" data-text="production-ready">production-ready</span> software and
-            <span class="highlight-text" data-text="AI-powered">AI-powered</span> products
+            Full-stack engineer building <span class="highlight-text">backend systems</span>, <span class="highlight-text">AI-powered products</span>, and cloud applications
           </h2>
-          <p class="typing-text">I build full stack applications from idea to deployment. <strong>React frontends</strong>, <strong>FastAPI and Node.js backends</strong>, <strong>cloud infrastructure</strong>, and <strong>AI features designed for real users</strong>. Most recently, I led development of MedKids OrderUp AI, taking it from an idea to a production ready platform.</p>
+          <p class="typing-text">I work across the stack: React frontends, FastAPI and Node.js backends, PostgreSQL or MongoDB underneath, and AWS running it all. Most recently I led development of MedKids OrderUp AI, an AI-powered nutrition platform for kids.</p>
 
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">
@@ -132,6 +131,19 @@
       </div>
     </section>
 
+    <!-- Current Focus -->
+    <section id="focus" class="section">
+      <div class="container">
+        <h2 class="section-title">Current Focus</h2>
+        <div class="focus-pills" data-aos="fade-up">
+          <span class="focus-pill"><i class="fas fa-server" aria-hidden="true"></i>Backend Engineering</span>
+          <span class="focus-pill"><i class="fas fa-diagram-project" aria-hidden="true"></i>Distributed Systems</span>
+          <span class="focus-pill"><i class="fas fa-robot" aria-hidden="true"></i>AI Applications</span>
+          <span class="focus-pill"><i class="fas fa-cloud" aria-hidden="true"></i>Cloud Infrastructure</span>
+        </div>
+      </div>
+    </section>
+
     <!-- About -->
     <section id="about" class="section">
       <div class="container">
@@ -156,6 +168,35 @@
           </div>
           <div class="about-photo">
             <img src="images/dushyant-illustration.webp" alt="Illustration of Dushyant working on his laptop with a coffee, with the Seattle skyline and playful icons for API, event-driven architecture, and error handling in the background" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Think -->
+    <section id="approach" class="section">
+      <div class="container">
+        <h2 class="section-title">How I Think</h2>
+        <div class="think-grid">
+          <div class="think-card" data-aos="fade-up">
+            <div class="think-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+            <h3>Build for Production</h3>
+            <p>I like building software that's easy to maintain months after launch, not just software that demos well.</p>
+          </div>
+          <div class="think-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="think-icon"><i class="fas fa-compress" aria-hidden="true"></i></div>
+            <h3>Keep It Simple</h3>
+            <p>The simplest solution is usually the easiest to debug, extend, and scale.</p>
+          </div>
+          <div class="think-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="think-icon"><i class="fas fa-diagram-project" aria-hidden="true"></i></div>
+            <h3>Own the Whole System</h3>
+            <p>I enjoy understanding everything from frontend to deployment so I can make better engineering decisions.</p>
+          </div>
+          <div class="think-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="think-icon"><i class="fas fa-seedling" aria-hidden="true"></i></div>
+            <h3>Always Learning</h3>
+            <p>Every project teaches something worth carrying into the next one.</p>
           </div>
         </div>
       </div>
@@ -250,22 +291,55 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
 
-          <article class="project-card" data-aos="fade-up">
-            <div class="project-media">
-              <img src="images/orderup.webp" alt="MedKids OrderUp AI: allergen-safe recipe and nutrition app for kids" width="640" height="360" loading="lazy" />
+        <article class="project-spotlight" data-aos="fade-up">
+          <div class="spotlight-media">
+            <img src="images/orderup.webp" alt="MedKids OrderUp AI: allergen-safe recipe and nutrition app for kids" loading="lazy" />
+          </div>
+          <div class="spotlight-content">
+            <span class="spotlight-eyebrow">Featured Project</span>
+            <h3>MedKids OrderUp AI</h3>
+            <p>MedKids OrderUp AI helps parents find recipes that are actually safe for their kids to eat. Parents set up an allergen profile for each child, and the app filters out anything that touches those allergens before a single recipe shows up, then ranks what's left by that kid's nutrition goals. I led the team that built it and did most of the hands-on engineering myself, across the frontend, both backend services, and the infrastructure running all three.</p>
+
+            <div class="arch-strip" aria-label="System architecture">
+              <span class="arch-box"><i class="fab fa-react" aria-hidden="true"></i>React / TypeScript client</span>
+              <i class="fas fa-arrow-right arch-arrow" aria-hidden="true"></i>
+              <span class="arch-box"><i class="fab fa-node-js" aria-hidden="true"></i>Node / Express API</span>
+              <i class="fas fa-arrow-right arch-arrow" aria-hidden="true"></i>
+              <span class="arch-box"><i class="fas fa-brain" aria-hidden="true"></i>FastAPI recommendation service</span>
+              <i class="fas fa-arrow-right arch-arrow" aria-hidden="true"></i>
+              <span class="arch-box"><i class="fas fa-database" aria-hidden="true"></i>MongoDB Atlas</span>
             </div>
-            <div class="project-content">
-              <h3>MedKids OrderUp AI</h3>
-              <p>Led a team of 5, but was also the one actually writing most of the code and running the show on DevOps: a React/TypeScript client, a Node/Express API, and a Python/FastAPI recommendation service, all sharing one MongoDB Atlas backend. The allergen engine is built so a recipe with a matching allergen just can't surface, and the test suite backs that up. It's a confidential client project, so the code isn't public, but I'm happy to talk through how it's built.</p>
-              <div class="project-metrics">
-                <span class="metric"><i class="fas fa-shield-alt" aria-hidden="true"></i> Zero allergen leakage</span>
-                <span class="metric"><i class="fas fa-vial" aria-hidden="true"></i> 92%/84% test coverage</span>
+            <p class="arch-note">The recommendation service sits behind its own API-key boundary, isolated from the main API.</p>
+
+            <div class="spotlight-breakdown">
+              <div class="spotlight-block">
+                <h4>My Role</h4>
+                <p>Primary engineer and de facto DevOps lead on a 5-person team: the backend split, a frontend rebuild from a Figma handoff, the AI service, auth, and the deploy pipeline.</p>
               </div>
-              <ul class="project-tags"><li>React 18</li><li>TypeScript</li><li>FastAPI</li><li>Node.js</li><li>MongoDB</li><li>JWT</li></ul>
+              <div class="spotlight-block">
+                <h4>Key Decisions</h4>
+                <p>The allergen engine hard-excludes any recipe with a matching allergen instead of scoring it lower, so nothing borderline slips through. The recommendation logic lives in its own Python service, since the NLP tooling it needs doesn't have a good Node equivalent.</p>
+              </div>
+              <div class="spotlight-block">
+                <h4>Challenges</h4>
+                <p>Allergen names show up inconsistently across recipe sources: peanut, peanuts, groundnut. I built a synonym-normalization layer shared between the TypeScript and Python sides, with a CI check that fails the build if the two drift apart. I also traced a flaky test suite to every test spinning up its own in-memory database, and fixed it with one shared instance and per-file isolation.</p>
+              </div>
+              <div class="spotlight-block">
+                <h4>Results</h4>
+                <p>Backend coverage landed around 92% of lines and 84% of branches, with the AI service at 100%. Deployed as three separate services across Render and Vercel, with GitHub Actions gating every deploy on the full suite passing.</p>
+              </div>
             </div>
-          </article>
+
+            <div class="project-metrics">
+              <span class="metric"><i class="fas fa-shield-alt" aria-hidden="true"></i> Zero allergen leakage</span>
+              <span class="metric"><i class="fas fa-vial" aria-hidden="true"></i> 92%/84% test coverage</span>
+            </div>
+          </div>
+        </article>
+
+        <h3 class="projects-subhead">More Projects</h3>
+        <div class="project-grid">
 
           <article class="project-card" data-aos="fade-up">
             <div class="project-media">
@@ -417,14 +491,15 @@
     <!-- Resume -->
     <section id="resume" class="section">
       <div class="container">
-        <h2 class="section-title">Resume</h2>
+        <h2 class="section-title">Engineering Highlights</h2>
         <div class="resume-content">
-          <p class="resume-intro">3+ years of building things that actually work in production. I do full-stack: <strong>React, TypeScript, FastAPI, Node.js, AWS</strong>, and AI features that ship. Here's what I'm most proud of:</p>
+          <p class="resume-intro">Over the past 3+ years I've built backend systems, full-stack applications, and AI-powered products across React, FastAPI, Node.js, AWS, and PostgreSQL. Here are a few highlights.</p>
           <div class="highlight-grid">
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-users" aria-hidden="true"></i></div><div class="highlight-content"><h4>Team Leadership</h4><p>Led 5 engineers as primary engineer & DevOps lead, taking MedKids OrderUp AI from zero to production-ready</p></div></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div><div class="highlight-content"><h4>API Performance</h4><p>35% latency cut (580ms → 380ms) via N+1 query analysis</p></div></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-database" aria-hidden="true"></i></div><div class="highlight-content"><h4>DB Optimization</h4><p>77% batch runtime saved (35 min → 8 min) at TCS</p></div></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-brain" aria-hidden="true"></i></div><div class="highlight-content"><h4>AI, Production-Ready</h4><p>Allergen-safe recommendation engine with a zero-leakage guarantee, COPPA-compliant and production-ready</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-people-group" aria-hidden="true"></i></div><div class="highlight-content"><h4>Led MedKids OrderUp AI</h4><p>Led a 5-person engineering team and took the platform from idea to production.</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div><div class="highlight-content"><h4>35% Faster APIs</h4><p>Reduced API latency by eliminating N+1 queries and optimizing database access.</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-gauge-high" aria-hidden="true"></i></div><div class="highlight-content"><h4>77% Faster ETL</h4><p>Reduced enterprise reporting jobs from 35 minutes to 8 minutes at TCS.</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div><div class="highlight-content"><h4>Production AI</h4><p>Built a COPPA-compliant recommendation engine that keeps AI-powered meal suggestions safe for kids.</p></div></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i></div><div class="highlight-content"><h4>Cloud & DevOps</h4><p>Set up CI/CD pipelines and deployed services across AWS, Docker, Render, and Vercel, so shipping became routine instead of stressful.</p></div></div>
           </div>
 
           <div class="resume-actions">
