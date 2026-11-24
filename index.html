@@ -43,7 +43,7 @@
     "@type":"Person",
     "name":"Dushyant Singh Pawar",
     "jobTitle":"Software Engineer",
-    "description":"Full-stack software engineer building AI-powered products from MVP to production-ready, React, TypeScript, FastAPI, Node.js, AWS",
+    "description":"Full-stack software engineer building backend services, AI-powered products and real-time features with React, TypeScript, Node.js, FastAPI, Java and AWS",
     "url":"https://dushyantsinghpawar.github.io/Portfolio/",
     "image":"https://dushyantsinghpawar.github.io/Portfolio/images/Dushyant.webp",
     "email":"mailto:dushyantsinghpawar@gmail.com",
@@ -85,7 +85,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#resume">Highlights</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="res_dushyant.pdf" target="_blank" rel="noopener">Resume</a></li>
+          <li><a href="Dushyant_Pawar_Resume_Backend.pdf" target="_blank" rel="noopener">Resume</a></li>
         </ul>
       </nav>
     </div>
@@ -98,9 +98,9 @@
       <div class="container hero-inner">
         <div class="hero-content">
           <h2 class="hero-title">
-            Full-stack engineer building <span class="highlight-text">AI-powered products</span>, <span class="highlight-text">modern web applications</span>, and scalable systems
+            Full-stack engineer building <span class="highlight-text">AI-powered products</span>
           </h2>
-          <p class="typing-text">I build full-stack applications with React, TypeScript, FastAPI, Node.js, PostgreSQL, MongoDB, and AWS. Most recently, I led development of MedKids OrderUp AI, where I owned the frontend, backend services, AI integration, authentication, and deployment pipeline.</p>
+          <p class="typing-text">I build full-stack applications with React, TypeScript, FastAPI, Node.js, PostgreSQL, MongoDB, and AWS. Right now I'm working on real-time streaming and computer-vision coaching features at an early-stage startup. Before that, I wrote most of the backend for MedKids OrderUp AI, a children's meal recommendation platform.</p>
 
           <div class="hero-buttons">
             <a href="#projects" class="btn btn-primary">
@@ -236,11 +236,12 @@
               </div>
               <p class="timeline-company">Stealth Startup • Remote</p>
               <ul class="timeline-achievements">
-                <li>Redesigned and shipped the frontend for a real-time computer-vision fitness platform built on <strong>MediaPipe Pose</strong>, <strong>Firebase</strong>, and <strong>Web Bluetooth</strong>, spanning desktop and responsive mobile experiences</li>
-                <li>Diagnosed and resolved a rendering issue affecting live workout sessions by debugging CSS specificity conflicts and synchronizing asynchronous camera-stream initialization</li>
-                <li>Built reusable UI components and standardized design patterns across three feature modules, creating a consistent experience across the application</li>
+                <li>Proposed and built in-app YouTube Live streaming to replace OBS: browser canvas video over <strong>WebRTC (WHIP)</strong> to a self-hosted <strong>MediaMTX</strong> relay on Fly.io, pushed to YouTube over RTMP through <strong>FFmpeg</strong></li>
+                <li><strong>Got FFmpeg encoding from 0.08x to 1.0x real time</strong> by moving the relay to a 2-vCPU machine and removing input throttling</li>
+                <li>Wrote a <strong>Cloudflare Workers</strong> API that verifies Firebase ID tokens and manages per-broadcast relay sessions, with idempotent start and crash cleanup</li>
+                <li>Built 8 real-time coaching features from <strong>MediaPipe</strong> pose landmarks, including fatigue, left-right asymmetry and tempo analysis, each with unit tests</li>
               </ul>
-              <div class="timeline-tech"><span>MediaPipe Pose</span><span>Firebase</span><span>Web Bluetooth</span><span>Computer Vision</span></div>
+              <div class="timeline-tech"><span>WebRTC</span><span>FFmpeg</span><span>Cloudflare Workers</span><span>MediaPipe</span><span>Firebase</span></div>
             </div>
           </article>
 
@@ -253,12 +254,12 @@
               </div>
               <p class="timeline-company">Rebecca Everlene Trust Company • Chicago, IL</p>
               <ul class="timeline-achievements">
-                <li>Led a team of 5 as primary engineer and de facto DevOps lead across the frontend, backend, and testing infrastructure for <strong>MedKids OrderUp AI</strong>, a 3-service COPPA-compliant recipe and nutrition platform for kids ages 4 to 10: a React/TypeScript client, a Node/Express API, and a Python/FastAPI recommendation microservice sharing a MongoDB Atlas backend</li>
-                <li>Designed an allergen-safe recommendation engine with hard-exclusion filtering (zero allergen leakage guarantee) and nutrition-goal scoring, backed by a bilingual TypeScript/Python synonym-normalization layer kept in sync via an automated CI drift test</li>
-                <li>Implemented JWT access/refresh auth, transactional-email password reset, and a COPPA-compliant parental consent flow; hardened the API with security headers, NoSQL-injection sanitization, rate limiting, and payload-size limits</li>
-                <li>Raised backend test coverage to <strong>~92% lines / 84% branches</strong> (Jest + Supertest) and AI service coverage to <strong>100%</strong> (pytest), fixing flaky CI by consolidating per-test in-memory databases into a single shared instance; authored the Render/Vercel deployment blueprint and the project's technical knowledge-transfer docs</li>
+                <li>Built 25 of the 27 REST endpoints for <strong>MedKids OrderUp AI</strong>, a children's meal recommendation platform, in Node.js, Express, TypeScript and MongoDB, on a three-person team</li>
+                <li>Built a FastAPI recommendation service that filters and ranks recipes by age group, excluded allergens and nutrition goals, plus an allergen normalizer mapping 168 synonyms to 11 canonical allergens</li>
+                <li>Built the COPPA parental consent workflow across the API and React app, and hardened the API with security headers, NoSQL-injection sanitization, rate limiting and payload-size limits</li>
+                <li>Wrote <strong>95 Jest/Supertest tests at 91% line coverage</strong>, fixed intermittent test failures by moving 11 per-file in-memory MongoDB instances to one shared instance, and wrote the Render/Vercel deployment config and knowledge-transfer docs</li>
               </ul>
-              <div class="timeline-tech"><span>React 18</span><span>TypeScript</span><span>Node.js</span><span>FastAPI</span><span>MongoDB</span><span>JWT</span><span>Render</span><span>Vercel</span><span>GitHub Actions</span></div>
+              <div class="timeline-tech"><span>React 18</span><span>TypeScript</span><span>Node.js</span><span>FastAPI</span><span>MongoDB</span><span>JWT</span><span>Jest</span><span>pytest</span></div>
             </div>
           </article>
 
@@ -274,7 +275,7 @@
                 <li>Built <strong>SupportAI</strong> as a research assistant: a search tool for 1,000+ academic papers that mixes vector search (FAISS) and keyword matching (BM25), then re-ranks with a cross-encoder. Every answer cites its source.</li>
                 <li>Taught and mentored 90+ students in Data Mining and Robotics as a teaching assistant.</li>
               </ul>
-              <div class="timeline-tech"><span>FAISS</span><span>BM25</span><span>SentenceTransformers</span><span>RAG</span><span>Python</span></div>
+              <div class="timeline-tech"><span>FAISS</span><span>BM25</span><span>RAG</span><span>Python</span></div>
             </div>
           </article>
 
@@ -287,13 +288,15 @@
               </div>
               <p class="timeline-company">EdvanceSkill for Actuaries • Bengaluru, India</p>
               <ul class="timeline-achievements">
-                <li><strong>Cut API latency from 580ms to 380ms</strong> by hunting down N+1 queries with EXPLAIN ANALYZE, switching to SQLAlchemy eager loading, and adding the right indexes</li>
-                <li>Deployed the Python backend on <strong>AWS ECS Fargate</strong> with scoped IAM roles, CloudWatch p99 alarms, and a GitHub Actions pipeline that releases on every merge to main</li>
+                <li><strong>Cut API latency from 580ms to 380ms</strong> by caching student course progress and test status in Redis in front of PostgreSQL</li>
+                <li>Published test-submission events to <strong>Kafka</strong> and processed them with consumers that updated course progress</li>
+                <li>Fixed N+1 query patterns found with EXPLAIN ANALYZE using Hibernate fetch joins and composite indexes</li>
+                <li>Deployed Spring Boot services to <strong>AWS ECS Fargate</strong> and EC2 through GitHub Actions, with CloudWatch alarms on p99 latency</li>
               </ul>
-              <div class="timeline-tech"><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>AWS ECS Fargate</span><span>OAuth 2.0</span><span>GitHub Actions</span></div>
+              <div class="timeline-tech"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>Redis</span><span>PostgreSQL</span><span>React</span><span>AWS</span></div>
             </div>
           </article>
-          
+
           <article class="timeline-item" data-aos="fade-up">
             <div class="timeline-marker"><div class="timeline-icon has-logo"><img src="images/logos/logo-tcs.png" alt="Tata Consultancy Services logo" loading="lazy" /></div></div>
             <div class="timeline-content">
@@ -303,8 +306,8 @@
               </div>
               <p class="timeline-company">Tata Consultancy Services • Pune, India</p>
               <ul class="timeline-achievements">
-                <li>Worked on a SaaS platform for BASF-Nunhems, maintaining SSIS ETL pipelines connecting SAP, ServiceNow, and Oracle to keep data flowing between the systems that tracked assets, transactions, and support tickets</li>
-                <li><strong>Cut an Oracle batch job from 35 minutes to 8</strong> by replacing correlated subqueries with hash joins and a covering index, and rewriting nested-cursor PL/SQL into set-based operations</li>
+                <li>Built and maintained SSIS and PL/SQL ETL pipelines for client BASF Nunhems, covering order, product, logistics and financial reporting data</li>
+                <li><strong>Cut a daily Oracle batch job from 35 minutes to 8</strong> by optimizing its SQL queries and adding indexes</li>
               </ul>
               <div class="timeline-tech"><span>Oracle SQL</span><span>ETL</span><span>SSIS</span><span>PL/SQL</span></div>
             </div>
@@ -314,7 +317,7 @@
             <div class="timeline-marker"><div class="timeline-icon has-logo"><img src="images/logos/logo-medicaps-icon.png" alt="Medi-Caps University logo" loading="lazy" /></div></div>
             <div class="timeline-content">
               <div class="timeline-header">
-                <h3>B.Tech in Computer Science</h3>
+                <h3>B.Tech in Computer Science and Engineering</h3>
                 <span class="timeline-date">Aug 2016 to Aug 2020</span>
               </div>
               <p class="timeline-company">Medi-Caps University • Indore, India</p>
@@ -352,31 +355,30 @@
           <div class="spotlight-content">
             <span class="spotlight-eyebrow">Featured Project</span>
             <h3>MedKids OrderUp AI</h3>
-            <p class="spotlight-summary">Production-ready AI-powered meal recommendation platform built with React, Express, FastAPI, MongoDB Atlas, Docker, and GitHub Actions CI/CD.</p>
+            <p class="spotlight-summary">Meal recommendation platform for families built with React, Express, FastAPI and MongoDB at a nonprofit, development-complete and not yet deployed when I left.</p>
             <div class="spotlight-meta">
-              <span><strong>Role:</strong> Technical Lead</span>
-              <span><strong>Team:</strong> 5 Engineers</span>
-              <span><strong>Status:</strong> Private Beta</span>
+              <span><strong>Role:</strong> Software Engineer</span>
+              <span><strong>Team:</strong> 3 Engineers</span>
+              <span><strong>Status:</strong> Pre-launch</span>
               <span><strong>Stack:</strong> React, Express, FastAPI, MongoDB</span>
             </div>
             <div class="spotlight-links">
-              <span class="spotlight-status" title="Currently available to internal testers. Public release coming soon."><i class="fas fa-lock" aria-hidden="true"></i> Private Beta</span>
+              <span class="spotlight-status" title="Code belongs to the nonprofit and is private."><i class="fas fa-lock" aria-hidden="true"></i> Private Code</span>
               <a href="#medkids-architecture" class="spotlight-link"><i class="fas fa-sitemap" aria-hidden="true"></i> System Design</a>
             </div>
 
             <div class="spotlight-intro">
               <p>MedKids OrderUp AI helps parents safely discover recipes tailored to their children's dietary needs. Every recommendation respects allergy restrictions while balancing nutrition, preparation time, and personal preferences.</p>
-              <p>As the technical lead on a five-person team, I owned development across the React frontend, Express backend, FastAPI AI service, authentication, testing, and deployment.</p>
+              <p>On a three-person team, I wrote about 95% of the code that shipped: the React frontend, the Express backend, the FastAPI recommendation service, authentication and the test suites.</p>
             </div>
 
             <div class="spotlight-badges">
               <span class="spotlight-badge">Multi-Service Architecture</span>
               <span class="spotlight-badge">JWT Authentication</span>
-              <span class="spotlight-badge">AI Recommendation Engine</span>
-              <span class="spotlight-badge">Docker</span>
-              <span class="spotlight-badge">GitHub Actions CI/CD</span>
-              <span class="spotlight-badge">MongoDB Atlas</span>
-              <span class="spotlight-badge">92% Test Coverage</span>
+              <span class="spotlight-badge">Rule-Based Recommendation Service</span>
+              <span class="spotlight-badge">COPPA Consent Workflow</span>
+              <span class="spotlight-badge">MongoDB</span>
+              <span class="spotlight-badge">91% Test Coverage</span>
             </div>
 
             <div class="arch-diagram" id="medkids-architecture" aria-label="System architecture">
@@ -390,7 +392,7 @@
                 <span class="arch-tick arch-tick-r"></span>
               </div>
               <i class="fas fa-arrow-down arch-connector arch-arrow-mobile" aria-hidden="true"></i>
-              <div class="arch-node arch-db"><i class="fas fa-database" aria-hidden="true"></i><span>MongoDB Atlas</span></div>
+              <div class="arch-node arch-db"><i class="fas fa-database" aria-hidden="true"></i><span>MongoDB</span></div>
               <div class="arch-node arch-ai"><i class="fas fa-brain" aria-hidden="true"></i><span>FastAPI Recommendation Service</span><small>API-key boundary</small></div>
             </div>
           </div>
@@ -399,11 +401,11 @@
             <div class="spotlight-block spotlight-block-primary">
               <h4>Ownership</h4>
               <ul>
-                <li>Led technical development across a five-person team</li>
+                <li>Wrote about 95% of the code on the main branch</li>
                 <li>Built the React frontend and Express backend</li>
-                <li>Developed the FastAPI AI recommendation service</li>
-                <li>Designed authentication and authorization</li>
-                <li>Managed deployment and CI/CD</li>
+                <li>Developed the FastAPI recommendation service</li>
+                <li>Built authentication and the COPPA consent workflow</li>
+                <li>Wrote the deployment config and knowledge-transfer docs</li>
               </ul>
             </div>
             <div class="spotlight-block">
@@ -427,11 +429,11 @@
             <div class="spotlight-block">
               <h4>Impact</h4>
               <div class="impact-grid">
-                <div class="impact-stat"><span class="impact-number">92%</span><span class="impact-label">Line Coverage</span></div>
+                <div class="impact-stat"><span class="impact-number">91%</span><span class="impact-label">Line Coverage</span></div>
                 <div class="impact-stat"><span class="impact-number">84%</span><span class="impact-label">Branch Coverage</span></div>
                 <div class="impact-stat"><span class="impact-number">100%</span><span class="impact-label">AI Service Coverage</span></div>
-                <div class="impact-stat"><span class="impact-number">0</span><span class="impact-label">Allergen Leakage</span></div>
-                <div class="impact-stat"><span class="impact-number">3</span><span class="impact-label">Production Services</span></div>
+                <div class="impact-stat"><span class="impact-number">25/27</span><span class="impact-label">REST Endpoints Built</span></div>
+                <div class="impact-stat"><span class="impact-number">95</span><span class="impact-label">Backend Tests</span></div>
               </div>
             </div>
           </div>
@@ -439,6 +441,28 @@
 
         <h3 class="projects-subhead">Selected Projects</h3>
         <div class="project-grid">
+
+          <article class="project-card" data-aos="fade-up">
+            <div class="project-media">
+              <img src="images/knowledge-system.svg" alt="Time-Aware Knowledge System: dated snapshots, BM25 search, authority and date ranking, cited answers" width="640" height="360" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/dushyantsinghpawar/dupaco-knowledge-system" target="_blank" rel="noopener" class="project-link">
+                    <i class="fab fa-github" aria-hidden="true"></i><span>View Code</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Time-Aware Knowledge System</h3>
+              <p>A Python question-answering system over 5 dated crawls of a credit union's website. It returns the current rate, fee or branch detail for any date with a cited source, and when pages disagree it ranks them by source authority and effective date and drops expired offers. Built as a take-home challenge; it passed review.</p>
+              <div class="project-metrics">
+                <span class="metric"><i class="fas fa-bullseye" aria-hidden="true"></i> 0.91 on 106-question blind set</span>
+                <span class="metric"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> 0.6s p95</span>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>BM25</li><li>Retrieval</li><li>Evaluation</li></ul>
+            </div>
+          </article>
 
           <article class="project-card" data-aos="fade-up">
             <div class="project-media">
@@ -456,7 +480,7 @@
             </div>
             <div class="project-content">
               <h3>Risk Analytics Dashboard</h3>
-              <p>A credit-rating simulation I built for fun: 40 mock companies, a sortable and paginated ratings table, session-based auth, and charts for status and industry breakdowns. I also built the component library from scratch (Button, Badge, Card, Toast, Skeleton) with a design-token system and dark mode.</p>
+              <p>A credit-rating dashboard built in React: 40 mock companies, a sortable and paginated ratings table, session-based login, CSV export, and charts for status and industry breakdowns. I also built the component library from scratch (Button, Badge, Card, Toast, Skeleton) with a design-token system and dark mode.</p>
               <div class="project-metrics">
                 <span class="metric"><i class="fas fa-building" aria-hidden="true"></i> 40-company dataset</span>
                 <span class="metric"><i class="fas fa-palette" aria-hidden="true"></i> Custom component library</span>
@@ -467,7 +491,7 @@
 
           <article class="project-card" data-aos="fade-up">
             <div class="project-media">
-              <img src="images/supportai.webp" alt="SupportAI: hybrid retrieval system over 1,000+ academic papers" width="640" height="360" loading="lazy" />
+              <img src="images/supportai.webp" alt="SupportAI: hybrid retrieval and cited answers" width="640" height="360" loading="lazy" />
               <div class="project-overlay">
                 <div class="project-links">
                   <a href="https://dushyantsinghpawar-supportai.hf.space/" target="_blank" rel="noopener" class="project-link">
@@ -481,12 +505,12 @@
             </div>
             <div class="project-content">
               <h3>SupportAI: Hybrid RAG Retrieval System</h3>
-              <p>Search tool for 1,000+ academic papers that mixes vector search (FAISS) and keyword matching (BM25), then re-ranks results with a cross-encoder to actually get it right. Every answer links back to its source. Built this during my time as a research assistant at UNC Charlotte.</p>
+              <p>Public rebuild of the RAG system I worked on as a research assistant at UNC Charlotte. It fuses BM25 and dense retrieval with reciprocal rank fusion, reranks with a cross-encoder, and streams cited answers from Gemini or a local model through Ollama. In a three-way eval, reranking raised answer phrase-hit from 91.3% to 100%.</p>
               <div class="project-metrics">
-                <span class="metric"><i class="fas fa-file-alt" aria-hidden="true"></i> 1,000+ papers indexed</span>
-                <span class="metric"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> &lt;1s response</span>
+                <span class="metric"><i class="fas fa-layer-group" aria-hidden="true"></i> Hybrid retrieval + reranking</span>
+                <span class="metric"><i class="fas fa-flask" aria-hidden="true"></i> Three-way eval</span>
               </div>
-              <ul class="project-tags"><li>FAISS</li><li>BM25</li><li>SentenceTransformers</li><li>FastAPI</li><li>Python</li></ul>
+              <ul class="project-tags"><li>BM25</li><li>Cross-encoder</li><li>FastAPI</li><li>React</li><li>Ollama / Gemini</li></ul>
             </div>
           </article>
 
@@ -503,12 +527,11 @@
             </div>
             <div class="project-content">
               <h3>QuickAPI</h3>
-              <p>A backend starter I kept rebuilding from scratch until I just made a proper template. JWT auth, RBAC, Alembic migrations, auto-generated API docs, and full audit logging. I've shipped multiple projects on top of this.</p>
+              <p>A FastAPI backend starter template with JWT auth, Alembic migrations, auto-generated API docs, a small ML prediction service and audit logging, packaged with Docker.</p>
               <div class="project-metrics">
-                <span class="metric"><i class="fas fa-vial" aria-hidden="true"></i> 100% Tests Passing</span>
-                <span class="metric"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> &lt;200ms</span>
+                <span class="metric"><i class="fas fa-box" aria-hidden="true"></i> One-command Docker setup</span>
               </div>
-              <ul class="project-tags"><li>FastAPI</li><li>Docker</li><li>CI/CD</li><li>Microservices</li></ul>
+              <ul class="project-tags"><li>FastAPI</li><li>PostgreSQL</li><li>Alembic</li><li>Docker</li></ul>
             </div>
           </article>
 
@@ -529,6 +552,8 @@
             <div class="skill-chip-list">
               <span class="skill-chip">FastAPI</span>
               <span class="skill-chip">Node.js / Express</span>
+              <span class="skill-chip">Java / Spring Boot</span>
+              <span class="skill-chip">Kafka</span>
               <span class="skill-chip">REST APIs</span>
               <span class="skill-chip">JWT / OAuth 2.0 / RBAC</span>
               <span class="skill-chip">SQLAlchemy</span>
@@ -539,11 +564,11 @@
           <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
             <div class="category-header"><i class="fab fa-aws" aria-hidden="true"></i><h3>Cloud & DevOps</h3></div>
             <div class="skill-chip-list">
-              <span class="skill-chip">AWS (ECS Fargate, S3, RDS, IAM, CloudWatch)</span>
+              <span class="skill-chip">AWS (ECS Fargate, EC2, CloudWatch)</span>
               <span class="skill-chip">Docker</span>
               <span class="skill-chip">GitHub Actions CI/CD</span>
-              <span class="skill-chip">Terraform</span>
-              <span class="skill-chip">Azure</span>
+              <span class="skill-chip">Cloudflare Workers</span>
+              <span class="skill-chip">Fly.io</span>
             </div>
           </div>
 
@@ -560,8 +585,8 @@
             <div class="category-header"><i class="fas fa-brain" aria-hidden="true"></i><h3>AI / LLM</h3></div>
             <div class="skill-chip-list">
               <span class="skill-chip">RAG / FAISS</span>
-              <span class="skill-chip">LangChain</span>
-              <span class="skill-chip">OpenAI & Gemini APIs</span>
+              <span class="skill-chip">Gemini API / Ollama</span>
+              <span class="skill-chip">MediaPipe</span>
               <span class="skill-chip">Cross-encoder Reranking</span>
               <span class="skill-chip">Streamlit</span>
             </div>
@@ -583,6 +608,7 @@
               <span class="skill-chip">TypeScript</span>
               <span class="skill-chip">Python</span>
               <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">Java</span>
               <span class="skill-chip">SQL</span>
             </div>
           </div>
@@ -597,16 +623,16 @@
         <div class="resume-content">
           <p class="resume-intro">Over the past 3+ years I've built backend systems, full-stack applications, and AI-powered products across React, FastAPI, Node.js, AWS, and PostgreSQL. Here are a few highlights.</p>
           <div class="highlight-grid">
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div><span class="highlight-metric">35%</span><h4>API Latency Reduction</h4><p>Reduced API latency by optimizing database queries and request handling.</p></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-gauge-high" aria-hidden="true"></i></div><span class="highlight-metric">77%</span><h4>Faster ETL Pipeline</h4><p>Reduced ETL processing time by redesigning batch workflows and SQL operations.</p></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-people-group" aria-hidden="true"></i></div><span class="highlight-metric">5</span><h4>Engineer Team Led</h4><p>Led engineering across a five-person team while owning architecture and delivery.</p></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-vial" aria-hidden="true"></i></div><span class="highlight-metric">92%</span><h4>Backend Test Coverage</h4><p>Built a comprehensive automated backend testing suite.</p></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div><span class="highlight-metric">0</span><h4>Allergen Leakage</h4><p>Achieved zero allergen leakage during recommendation testing.</p></div>
-            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i></div><span class="highlight-metric">3</span><h4>Production Services</h4><p>Designed and deployed three production services working together.</p></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-bolt" aria-hidden="true"></i></div><span class="highlight-metric">35%</span><h4>API Latency Reduction</h4><p>Cached student progress in Redis in front of PostgreSQL, taking an API from 580ms to 380ms.</p></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-gauge-high" aria-hidden="true"></i></div><span class="highlight-metric">77%</span><h4>Faster ETL Pipeline</h4><p>Took a daily Oracle batch job from 35 minutes to 8 by optimizing its SQL and adding indexes.</p></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-people-group" aria-hidden="true"></i></div><span class="highlight-metric">12x</span><h4>Faster Video Encoding</h4><p>Got a live-streaming relay from 0.08x to real-time FFmpeg encoding.</p></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-vial" aria-hidden="true"></i></div><span class="highlight-metric">91%</span><h4>Backend Test Coverage</h4><p>Wrote 95 Jest/Supertest tests for a Node.js API.</p></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div><span class="highlight-metric">0.91</span><h4>Blind-Set Score</h4><p>Scored a time-aware QA system on 106 questions written apart from development data.</p></div>
+            <div class="highlight-item"><div class="highlight-icon"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i></div><span class="highlight-metric">&lt;2 mo</span><h4>Proposal to Production</h4><p>Took in-app YouTube Live streaming from proposal to production.</p></div>
           </div>
 
           <div class="resume-actions">
-            <a href="res_dushyant.pdf" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i><span>Download Resume</span></a>
+            <a href="Dushyant_Pawar_Resume_Backend.pdf" class="btn btn-primary" target="_blank" rel="noopener"><i class="fas fa-download" aria-hidden="true"></i><span>Download Resume</span></a>
             <a href="https://www.linkedin.com/in/dushyantsinghpawar/" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
             <a href="https://github.com/dushyantsinghpawar" class="btn btn-secondary" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span></a>
           </div>
